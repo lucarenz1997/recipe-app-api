@@ -17,19 +17,7 @@ docker-compose up --> starts our services (go to http://127.0.0.1:8000/)
 docker-compose run --rm app sh -c "python manage.py test" --> tests our code
 
 ### github actions
-Create a new file in your repository called ".github/workflows/checks.yml" and add this code inside it:
-yaml
-name: CI
-on: [push]
-jobs:
-build:
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v2
-- name: Set up Python 3.x
-uses: actions/setup-python@v2
-with:
-python-version: '3.x'
-- name: Install dependencies
-run: |
-pip install -r requirements.txt
+Create a new file in your repository called ".github/workflows/checks.yml"
+
+inside docker create your tokens
+inside your github repo, add the secrets and you should now be linked
